@@ -80,7 +80,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Serasi Calculator",
-    page_icon=":two_hearts:",
+    page_icon=":heart_decoration:",
 )
 
 st.title(':two_hearts: SERASI CALCULATOR :two_hearts:')

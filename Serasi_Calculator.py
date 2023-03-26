@@ -89,6 +89,23 @@ st.subheader("Fit for each other, huh? Let's see :eyes:")
 url = "https://www.youtube.com/watch?v=B6VkZaJFVqU"
 st.write("Inspired by a childhood game :arrow_right: [How to Play](%s)" % url)
 
+st.info(
+    """
+
+    ###### **Disclaimer**
+
+    * ###### This app is not a fortune-telling tool and should be used for entertainment purposes only.
+
+    * ###### The results provided by the app are not intended to be taken seriously or as a source of factual information.
+
+    * ###### The creator of this app do not claim to possess any supernatural abilities or powers, and any predictions made by the app should be taken with a grain a grain of salt.
+
+    * ###### Users are solely responsible for any decisions they make based on the results provided by the app.
+
+    """
+    , icon="ℹ️"
+)
+
 names = []
 
 with st.form("nameform"):

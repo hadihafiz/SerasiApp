@@ -98,9 +98,11 @@ st.info(
 
     * ###### The results provided by the app are not intended to be taken seriously or as a source of factual information.
 
-    * ###### The creator of this app do not claim to possess any supernatural abilities or powers, and any predictions made by the app should be taken with a grain a grain of salt.
+    * ###### The creator of this app do not claim to possess any supernatural abilities or powers, and any predictions made by the app should be taken with a grain of salt.
 
     * ###### Users are solely responsible for any decisions they make based on the results provided by the app.
+    
+    * ###### No data is taken during app usage. Your personal information and data are kept strictly confidential and are not shared with any third party.
 
     """
     , icon="ℹ️"

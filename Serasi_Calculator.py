@@ -118,3 +118,6 @@ with st.form("nameform"):
        names.append(name1)
        names.append(name2)
        matchMaker(names)
+
+if st.button('Try Again!'):
+    st.experimental_rerun()

@@ -76,50 +76,52 @@ def matchMaker(names):
         animation_length="infinite",
     )
 
-import streamlit as st
+def main():
+    st.set_page_config(
+        page_title="Serasi Calculator",
+        page_icon=":heart_decoration:",
+    )
 
-st.set_page_config(
-    page_title="Serasi Calculator",
-    page_icon=":heart_decoration:",
-)
+    st.title(':two_hearts: SERASI CALCULATOR :two_hearts:')
+    st.caption('By: Hadi Hafiz')
+    st.subheader("Fit for each other, huh? Let's see :eyes:")
+    url = "https://www.youtube.com/watch?v=B6VkZaJFVqU"
+    st.write("Inspired by a childhood game :arrow_right: [How to Play](%s)" % url)
 
-st.title(':two_hearts: SERASI CALCULATOR :two_hearts:')
-st.caption('By: Hadi Hafiz')
-st.subheader("Fit for each other, huh? Let's see :eyes:")
-url = "https://www.youtube.com/watch?v=B6VkZaJFVqU"
-st.write("Inspired by a childhood game :arrow_right: [How to Play](%s)" % url)
+    st.info(
+        """
 
-st.info(
-    """
+        ###### **Disclaimer**
 
-    ###### **Disclaimer**
+        * ###### This app is not a fortune-telling tool and should be used for entertainment purposes only.
 
-    * ###### This app is not a fortune-telling tool and should be used for entertainment purposes only.
+        * ###### The results provided by the app are not intended to be taken seriously or as a source of factual information.
 
-    * ###### The results provided by the app are not intended to be taken seriously or as a source of factual information.
+        * ###### The creator of this app do not claim to possess any supernatural abilities or powers, and any predictions made by the app should be taken with a grain of salt.
 
-    * ###### The creator of this app do not claim to possess any supernatural abilities or powers, and any predictions made by the app should be taken with a grain of salt.
+        * ###### Users are solely responsible for any decisions they make based on the results provided by the app.
+        
+        * ###### No data is taken during app usage. Your personal information and data are kept strictly confidential and are not shared with any third party.
 
-    * ###### Users are solely responsible for any decisions they make based on the results provided by the app.
-    
-    * ###### No data is taken during app usage. Your personal information and data are kept strictly confidential and are not shared with any third party.
+        """
+        , icon="ℹ️"
+    )
 
-    """
-    , icon="ℹ️"
-)
+    names = []
 
-names = []
+    with st.form("nameform"):
+        name1 = st.text_input('Name:')
+        name2 = st.text_input("Partner's Name:")
 
-with st.form("nameform"):
-    name1 = st.text_input('Name:')
-    name2 = st.text_input("Partner's Name:")
+        # Every form must have a submit button.
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            names.append(name1)
+            names.append(name2)
+            matchMaker(names)
 
-    # Every form must have a submit button.
-    submitted = st.form_submit_button("Submit")
-    if submitted:
-       names.append(name1)
-       names.append(name2)
-       matchMaker(names)
+    if st.button('Try Again!'):
+        st.experimental_rerun()
 
-if st.button('Try Again!'):
-    st.experimental_rerun()
+if __name__ == '__main__':
+    main()

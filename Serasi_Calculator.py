@@ -114,7 +114,7 @@ def main():
         name2 = st.text_input("Partner's Name:")
 
         # Every form must have a submit button.
-        submitted = st.form_submit_button("Submit")
+        submitted = st.form_submit_button("Calculate")
         if submitted:
             names.append(name1)
             names.append(name2)
